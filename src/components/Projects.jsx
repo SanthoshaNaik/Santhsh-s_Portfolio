@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Github, ExternalLink, Activity, BarChart2, FolderCode, Award, Percent } from 'lucide-react';
+import { Github } from 'lucide-react';
 
 const categories = ['All', 'AI & ML', 'MERN', 'Web'];
 
@@ -14,29 +14,7 @@ const projectsData = [
     github: 'https://github.com/SanthoshaNaik/Online-Grocery-Shop.git',
     demo: '#',
     accentColor: 'from-emerald-500/20 to-teal-500/20',
-    borderColor: 'group-hover:border-emerald-500/50',
-    specialUI: (
-      <div className="mt-4 p-4 rounded-xl bg-black/40 border border-emerald-500/20 font-mono text-[11px] text-emerald-400 space-y-2">
-        <div className="flex items-center gap-1.5 text-xs text-white font-bold mb-1">
-          <FolderCode size={14} className="text-emerald-400" />
-          <span>Grocery Platform API</span>
-        </div>
-        <div className="grid grid-cols-2 gap-2">
-          <div className="bg-black/60 p-2 rounded border border-white/5">
-            <span className="text-gray-500">DB STATUS:</span> <span className="font-bold text-green-400">CONNECTED</span>
-          </div>
-          <div className="bg-black/60 p-2 rounded border border-white/5">
-            <span className="text-gray-500">API GATEWAY:</span> <span className="font-bold text-white">ACTIVE</span>
-          </div>
-        </div>
-        <div className="bg-black/60 p-2 rounded border border-white/5 space-y-0.5">
-          <div className="flex justify-between text-[10px]">
-            <span>MERN stack modules:</span>
-            <span className="text-emerald-300 font-bold">4 / 4 Loaded</span>
-          </div>
-        </div>
-      </div>
-    )
+    borderColor: 'group-hover:border-emerald-500/50'
   },
   {
     id: 2,
@@ -47,30 +25,7 @@ const projectsData = [
     github: 'https://github.com/SanthoshaNaik/Gait-Anomaly-Prediction-Using-CNN-algorithm.git',
     demo: '#',
     accentColor: 'from-cyan-500/20 to-blue-500/20',
-    borderColor: 'group-hover:border-cyan-500/50',
-    specialUI: (
-      <div className="mt-4 p-4 rounded-xl bg-black/40 border border-cyan-500/20 font-mono text-[11px] text-cyan-400 space-y-2">
-        <div className="flex items-center gap-1.5 text-xs text-white font-bold mb-1">
-          <Activity size={14} className="text-cyan-400 animate-pulse" />
-          <span>CNN Classifier Metrics</span>
-        </div>
-        <div className="grid grid-cols-2 gap-2">
-          <div className="bg-black/60 p-2 rounded border border-white/5">
-            <span className="text-gray-500">MODEL ACC:</span> <span className="font-bold text-white">96.5%</span>
-          </div>
-          <div className="bg-black/60 p-2 rounded border border-white/5">
-            <span className="text-gray-500">VAL ACC:</span> <span className="font-bold text-white">95.2%</span>
-          </div>
-        </div>
-        <div className="bg-black/60 p-2 rounded border border-white/5 space-y-0.5">
-          <p className="text-[10px] text-gray-500 font-bold">NETWORK PARAMETERS</p>
-          <div className="flex justify-between text-[10px]">
-            <span>CNN Layers count:</span>
-            <span className="text-cyan-400 font-bold">5 Conv2D + Dense</span>
-          </div>
-        </div>
-      </div>
-    )
+    borderColor: 'group-hover:border-cyan-500/50'
   },
   {
     id: 3,
@@ -81,27 +36,7 @@ const projectsData = [
     github: 'https://github.com/SanthoshaNaik',
     demo: '#',
     accentColor: 'from-purple-500/20 to-pink-500/20',
-    borderColor: 'group-hover:border-purple-500/50',
-    specialUI: (
-      <div className="mt-4 p-4 rounded-xl bg-black/40 border border-purple-500/20 text-xs text-gray-300 space-y-3">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-1.5 text-xs text-white font-bold">
-            <BarChart2 size={14} className="text-purple-400" />
-            <span>Platform Overview</span>
-          </div>
-        </div>
-        <div className="space-y-2 font-mono text-[10px]">
-          <div className="flex justify-between">
-            <span>Admin Article Panel</span>
-            <span className="text-purple-400">Online</span>
-          </div>
-          <div className="flex justify-between">
-            <span>Contact Form Endpoint</span>
-            <span className="text-pink-400">Configured</span>
-          </div>
-        </div>
-      </div>
-    )
+    borderColor: 'group-hover:border-purple-500/50'
   }
 ];
 
@@ -232,8 +167,7 @@ export default function Projects() {
                     {project.description}
                   </p>
 
-                  {/* Dynamic metric dashboards & charts */}
-                  {project.specialUI}
+                  {/* Dynamic metric dashboards & charts removed */}
                 </div>
 
                 {/* Footer details & CTAs */}
@@ -248,7 +182,7 @@ export default function Projects() {
                   </div>
 
                   {/* CTA Buttons */}
-                  <div className="flex items-center justify-between border-t border-card-border pt-4">
+                  <div className="flex items-center justify-start border-t border-card-border pt-4">
                     <a
                       href={project.github}
                       target="_blank"
@@ -257,14 +191,6 @@ export default function Projects() {
                     >
                       <Github size={16} />
                       <span>Source Code</span>
-                    </a>
-                    
-                    <a
-                      href={project.demo}
-                      className="flex items-center gap-1 text-xs font-bold text-primary hover:text-accent transition-colors group/link cursor-pointer"
-                    >
-                      <span>Live Demo</span>
-                      <ExternalLink size={14} className="transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
                     </a>
                   </div>
                 </div>

@@ -112,16 +112,6 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-
-            {/* Interactive Grid Art (Bottom) */}
-            <div className="border-t border-card-border pt-8 mt-8">
-              <div className="p-4 rounded-2xl bg-black/30 border border-white/5 font-mono text-[9px] text-gray-500 space-y-1">
-                <p><span className="text-purple-400">import</span> socket, sys</p>
-                <p><span className="text-purple-400">print</span>(<span className="text-emerald-400">"Connecting to Santhosha Narayana Naik..."</span>)</p>
-                <p><span className="text-yellow-400">ping</span> -c 1 local.server.in</p>
-                <p className="text-green-400">» STATUS: 200 OK [Latency: 12ms]</p>
-              </div>
-            </div>
           </motion.div>
         </div>
 
