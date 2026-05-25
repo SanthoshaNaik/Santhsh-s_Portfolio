@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6;
+  --color-secondary: #a855f7;
+  --color-accent: #06b6d4;
+  --color-bg-base: var(--background);
+  --color-text-base: var(--foreground);
+  --color-card-base: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-text-muted: var(--text-muted);
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Fira Code', monospace;
+}
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --text-muted: #475569;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-border: rgba(148, 163, 184, 0.15);
+  --glow-color: rgba(59, 130, 246, 0.15);
+  --primary-glow: rgba(59, 130, 246, 0.1);
+  --secondary-glow: rgba(168, 85, 247, 0.1);
+  --accent-glow: rgba(6, 182, 212, 0.1);
+  color-scheme: light;
+}
+
+:root.dark {
+  --background: #030712;
+  --foreground: #f3f4f6;
+  --text-muted: #9ca3af;
+  --card-bg: rgba(17, 24, 39, 0.45);
+  --card-border: rgba(255, 255, 255, 0.05);
+  --glow-color: rgba(99, 102, 241, 0.2);
+  --primary-glow: rgba(59, 130, 246, 0.2);
+  --secondary-glow: rgba(168, 85, 247, 0.2);
+  --accent-glow: rgba(6, 182, 212, 0.2);
+  color-scheme: dark;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.3);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.6);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Glassmorphism utility classes */
+.glassmorphism {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid var(--card-border);
+}
+
+.glassmorphism-hover {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.glassmorphism-hover:hover {
+  background: rgba(var(--foreground), 0.05);
+  border-color: rgba(168, 85, 247, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.08);
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 8s ease-in-out infinite;
+}
+
+/* Typewriter blink animation */
+.typewriter-cursor::after {
+  content: '|';
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { color: transparent }
+  50% { color: #a855f7 }
+}
+
+/* Grid overlay background */
+.grid-bg {
+  background-image: 
+    linear-gradient(rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center;
+}
+
+.dark .grid-bg {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Custom Hide Scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
