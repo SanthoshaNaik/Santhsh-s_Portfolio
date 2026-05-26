@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { BookOpen, GraduationCap, Briefcase, Calendar, MapPin } from 'lucide-react';
+import { BookOpen, GraduationCap, Briefcase, Calendar, MapPin, ExternalLink } from 'lucide-react';
 
 const timelineData = [
   {
@@ -10,7 +10,7 @@ const timelineData = [
     period: 'Feb 2024 - Dec 2025',
     icon: <GraduationCap className="text-primary" size={18} />,
     description: 'Completed postgraduate computer application studies with intensive coursework in advanced database systems, computer networks, MERN stack architecture, and machine learning.',
-    highlights: ['Achieved an outstanding CGPA of 8.72 / 10', 'Focus on web technologies, relational/non-relational databases, and software engineering principles']
+    highlights: ['Achieved an outstanding CGPA of 8.73 / 10', 'Focus on web technologies, relational/non-relational databases, and software engineering principles']
   },
   {
     type: 'experience',
@@ -20,6 +20,7 @@ const timelineData = [
     period: '2024',
     icon: <Briefcase className="text-secondary" size={18} />,
     description: 'Completed a practical full-stack internship focusing on front-to-back development. Gained hands-on exposure to full-stack architectures and MERN technologies.',
+    link: 'https://drive.google.com/file/d/1tYIGgfqBKsdnkqrYVkMLZn9mm_eJdsaQ/view?usp=drive_link',
     highlights: [
       'Developed and tested web applications using HTML, CSS, and the MERN stack',
       'Improved functionality, design systems, and general user experience across modules'
@@ -170,6 +171,20 @@ export default function Experience() {
                       </li>
                     ))}
                   </ul>
+
+                  {item.link && (
+                    <div className="mt-4 flex justify-start">
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-card-border bg-card-base hover:bg-black/5 dark:hover:bg-white/5 text-xs font-semibold text-foreground hover:text-primary transition-all duration-300 cursor-pointer"
+                      >
+                        <span>Verify Internship</span>
+                        <ExternalLink size={12} />
+                      </a>
+                    </div>
+                  )}
                 </motion.div>
 
               </div>

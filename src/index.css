@@ -30,10 +30,10 @@
 }
 
 :root.dark {
-  --background: #030712;
+  --background: #000000;
   --foreground: #f3f4f6;
   --text-muted: #9ca3af;
-  --card-bg: rgba(17, 24, 39, 0.45);
+  --card-bg: rgba(10, 10, 10, 0.6);
   --card-border: rgba(255, 255, 255, 0.05);
   --glow-color: rgba(99, 102, 241, 0.2);
   --primary-glow: rgba(59, 130, 246, 0.2);

@@ -6,7 +6,6 @@ import useDarkMode from './hooks/useDarkMode';
 import LoadingScreen from './components/LoadingScreen';
 import ScrollProgress from './components/ScrollProgress';
 import Navbar from './components/Navbar';
-import CursorGlow from './components/CursorGlow';
 
 // Site Sections
 import Hero from './components/Hero';
@@ -35,9 +34,6 @@ export default function App() {
         <div className="relative min-h-screen text-foreground transition-colors duration-500 selection:bg-primary/20 selection:text-primary">
           {/* Top Scroll Indicator */}
           <ScrollProgress />
-
-          {/* Cursor Radial Glow Effect */}
-          <CursorGlow />
 
           {/* Global Floating Navbar */}
           <Navbar theme={theme} toggleTheme={toggleTheme} />
