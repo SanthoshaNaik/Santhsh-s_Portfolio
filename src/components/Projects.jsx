@@ -33,7 +33,7 @@ const projectsData = [
     category: 'Web',
     description: 'A web-based platform designed to share and explore technology-related articles. Allows users to read articles posted by the admin and interact through a contact section.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Node.js'],
-    github: 'https://github.com/SanthoshaNaik',
+    github: 'https://github.com/SanthoshaNaik/TechWorld.git',
     demo: '#',
     accentColor: 'from-purple-500/20 to-pink-500/20',
     borderColor: 'group-hover:border-purple-500/50'
