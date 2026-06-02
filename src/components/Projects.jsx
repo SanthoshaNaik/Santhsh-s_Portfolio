@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Github } from 'lucide-react';
+import { Github, ExternalLink } from 'lucide-react';
 
 const categories = ['All', 'AI & ML', 'MERN', 'Web'];
 
@@ -12,7 +12,7 @@ const projectsData = [
     description: 'A full-stack e-commerce web application that allows users to browse, search, and purchase groceries online. Implemented using standard HTML/CSS structure along with the complete MERN stack.',
     technologies: ['HTML', 'CSS', 'MongoDB', 'Express.js', 'React.js', 'Node.js'],
     github: 'https://github.com/SanthoshaNaik/Online-Grocery-Shop.git',
-    demo: '#',
+    demo: 'https://online-grocery-shop-mu.vercel.app/',
     accentColor: 'from-emerald-500/20 to-teal-500/20',
     borderColor: 'group-hover:border-emerald-500/50'
   },
@@ -23,7 +23,7 @@ const projectsData = [
     description: 'A video/image-based gait analysis system that predicts walking disorders and classifies abnormal patterns using Convolutional Neural Networks (CNNs).',
     technologies: ['Python', 'CNN Algorithm', 'OpenCV', 'Keras / TensorFlow'],
     github: 'https://github.com/SanthoshaNaik/Gait-Anomaly-Prediction-Using-CNN-algorithm.git',
-    demo: '#',
+    demo: 'https://huggingface.co/spaces/SanthoshhNaik/Gait-Anomaly-Prediction-Using-CNN-algorithm',
     accentColor: 'from-cyan-500/20 to-blue-500/20',
     borderColor: 'group-hover:border-cyan-500/50'
   },
@@ -34,7 +34,7 @@ const projectsData = [
     description: 'A web-based platform designed to share and explore technology-related articles. Allows users to read articles posted by the admin and interact through a contact section.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Node.js'],
     github: 'https://github.com/SanthoshaNaik/TechWorld.git',
-    demo: '#',
+    demo: 'https://tech-world-lyart.vercel.app/',
     accentColor: 'from-purple-500/20 to-pink-500/20',
     borderColor: 'group-hover:border-purple-500/50'
   }
@@ -182,7 +182,7 @@ export default function Projects() {
                   </div>
 
                   {/* CTA Buttons */}
-                  <div className="flex items-center justify-start border-t border-card-border pt-4">
+                  <div className="flex items-center justify-between border-t border-card-border pt-4">
                     <a
                       href={project.github}
                       target="_blank"
@@ -192,6 +192,18 @@ export default function Projects() {
                       <Github size={16} />
                       <span>Source Code</span>
                     </a>
+
+                    {project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 text-xs font-bold text-primary hover:text-accent transition-colors group/link cursor-pointer"
+                      >
+                        <span>Visit Site</span>
+                        <ExternalLink size={14} className="transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+                      </a>
+                    )}
                   </div>
                 </div>
 
