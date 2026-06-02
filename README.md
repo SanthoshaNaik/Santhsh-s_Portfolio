@@ -2,6 +2,11 @@
 
 A modern, animated, and fully responsive developer portfolio built for **Santhosh Naik**, a Computer Science student and AI/Software Developer. Designed with sleek glassmorphism, dynamic scrolling behaviors, ambient lighting, and interactive physics-based particle backgrounds.
 
+#To Run This project Locaally using CMD
+1. run this Command in CMD
+   npm run dev
+2. open This link in your broweser
+   http://localhost:5173/
 ## 🚀 Features
 
 - **Dark & Light Mode Toggle**: Adaptive theme context storing preference in localStorage.
