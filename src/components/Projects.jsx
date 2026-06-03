@@ -7,14 +7,14 @@ const categories = ['All', 'AI & ML', 'MERN', 'Web'];
 const projectsData = [
   {
     id: 1,
-    title: 'Online Grocery Store',
-    category: 'MERN',
-    description: 'A full-stack e-commerce web application that allows users to browse, search, and purchase groceries online. Implemented using standard HTML/CSS structure along with the complete MERN stack.',
-    technologies: ['HTML', 'CSS', 'MongoDB', 'Express.js', 'React.js', 'Node.js'],
-    github: 'https://github.com/SanthoshaNaik/Online-Grocery-Shop.git',
-    demo: 'https://online-grocery-shop-mu.vercel.app/',
-    accentColor: 'from-emerald-500/20 to-teal-500/20',
-    borderColor: 'group-hover:border-emerald-500/50'
+    title: 'Tech-World',
+    category: 'Web',
+    description: 'A web-based platform designed to share and explore technology-related articles. Allows users to read articles posted by the admin and interact through a contact section.',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Node.js'],
+    github: 'https://github.com/SanthoshaNaik/TechWorld.git',
+    demo: 'https://tech-world-lyart.vercel.app/',
+    accentColor: 'from-purple-500/20 to-pink-500/20',
+    borderColor: 'group-hover:border-purple-500/50'
   },
   {
     id: 2,
@@ -29,14 +29,14 @@ const projectsData = [
   },
   {
     id: 3,
-    title: 'Tech-World',
-    category: 'Web',
-    description: 'A web-based platform designed to share and explore technology-related articles. Allows users to read articles posted by the admin and interact through a contact section.',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Node.js'],
-    github: 'https://github.com/SanthoshaNaik/TechWorld.git',
-    demo: 'https://tech-world-lyart.vercel.app/',
-    accentColor: 'from-purple-500/20 to-pink-500/20',
-    borderColor: 'group-hover:border-purple-500/50'
+    title: 'Online Grocery Store',
+    category: 'MERN',
+    description: 'A full-stack e-commerce web application that allows users to browse, search, and purchase groceries online. Implemented using standard HTML/CSS structure along with the complete MERN stack.',
+    technologies: ['HTML', 'CSS', 'MongoDB', 'Express.js', 'React.js', 'Node.js'],
+    github: 'https://github.com/SanthoshaNaik/Online-Grocery-Shop.git',
+    demo: 'https://online-grocery-shop-mu.vercel.app/',
+    accentColor: 'from-emerald-500/20 to-teal-500/20',
+    borderColor: 'group-hover:border-emerald-500/50'
   }
 ];
 
