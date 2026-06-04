@@ -140,7 +140,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="/resume.pdf"
+              href="/santhosh naik Jun 26 Resume.pdf"
               download
               className="flex items-center gap-2 px-6 py-3.5 border border-card-border bg-card-base hover:bg-black/5 dark:hover:bg-white/5 text-foreground font-semibold rounded-xl shadow-sm transition-all duration-300 transform hover:-translate-y-0.5 group cursor-pointer"
             >
