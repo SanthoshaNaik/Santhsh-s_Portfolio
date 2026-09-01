@@ -59,16 +59,16 @@ export default function LoadingScreen({ onComplete }) {
               repeat: Infinity,
               ease: "linear",
             }}
-            className="w-16 h-16 bg-gradient-to-tr from-primary via-secondary to-accent opacity-80"
+            className="w-16 h-16 bg-gradient-to-tr from-white via-gray-400 to-gray-700 opacity-80"
           />
         </div>
 
         {/* Title */}
         <div className="text-center space-y-1">
-          <h2 className="text-2xl font-bold font-display tracking-wider bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+          <h2 className="text-2xl font-bold font-display tracking-wider bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
             SANTHOSH NAIK
           </h2>
-          <p className="text-xs text-gray-500 uppercase tracking-widest">
+          <p className="text-xs text-gray-400 uppercase tracking-widest">
             AI & Software Developer
           </p>
         </div>
@@ -85,7 +85,7 @@ export default function LoadingScreen({ onComplete }) {
               initial={{ width: 0 }}
               animate={{ width: `${progress}%` }}
               transition={{ duration: 0.1 }}
-              className="h-full bg-gradient-to-r from-primary via-secondary to-accent rounded-full"
+              className="h-full bg-gradient-to-r from-white via-gray-400 to-gray-600 rounded-full"
             />
           </div>
         </div>

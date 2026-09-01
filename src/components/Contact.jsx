@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Github, MapPin } from 'lucide-react';
+import { Mail, Linkedin, Github, MapPin, Phone } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -26,14 +26,14 @@ export default function Contact() {
             whileInView={{ width: 60 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"
+            className="h-1 bg-gradient-to-r from-neutral-900 via-neutral-600 to-neutral-900 dark:from-white dark:via-neutral-400 dark:to-neutral-600 mx-auto rounded-full"
           />
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-base text-text-muted"
+            className="text-base text-text-muted font-medium"
           >
             Have a project in mind, need software infrastructure, or just want to connect?
           </motion.p>
@@ -46,13 +46,13 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="max-w-2xl w-full flex flex-col justify-between glassmorphism p-8 rounded-3xl border-card-border"
+            className="max-w-2xl w-full flex flex-col justify-between glassmorphism p-8 rounded-3xl border-card-border shadow-sm"
           >
             <div className="space-y-6">
               <h3 className="text-2xl font-bold font-display text-foreground text-left">
                 Contact Information
               </h3>
-              <p className="text-sm text-text-muted text-left leading-relaxed">
+              <p className="text-sm text-text-muted text-left leading-relaxed font-normal">
                 Feel free to reach out or ping me directly across my socials. I will get back to you as soon as possible.
               </p>
 
@@ -60,14 +60,27 @@ export default function Contact() {
               <div className="space-y-6 pt-4">
                 <a
                   href="mailto:santhoshanaik02@gmail.com"
-                  className="flex items-center gap-4 text-text-muted hover:text-primary transition-all duration-300 group"
+                  className="flex items-center gap-4 text-text-muted hover:text-neutral-950 dark:hover:text-white transition-all duration-300 group"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-card-base border border-card-border flex items-center justify-center text-primary group-hover:scale-105 transition-transform duration-300">
+                  <div className="w-11 h-11 rounded-xl bg-card-base border border-card-border flex items-center justify-center text-neutral-900 dark:text-neutral-100 group-hover:scale-105 transition-transform duration-300 shadow-sm">
                     <Mail size={18} />
                   </div>
                   <div className="text-left font-mono text-xs font-semibold">
-                    <p className="text-gray-500 font-bold uppercase tracking-wider text-[10px] leading-none mb-1">Email</p>
-                    <p className="text-foreground">santhoshanaik02@gmail.com</p>
+                    <p className="text-neutral-500 dark:text-neutral-400 font-bold uppercase tracking-wider text-[10px] leading-none mb-1">Email</p>
+                    <p className="text-foreground font-semibold">santhoshanaik02@gmail.com</p>
+                  </div>
+                </a>
+
+                <a
+                  href="tel:+918970900825"
+                  className="flex items-center gap-4 text-text-muted hover:text-neutral-950 dark:hover:text-white transition-all duration-300 group"
+                >
+                  <div className="w-11 h-11 rounded-xl bg-card-base border border-card-border flex items-center justify-center text-neutral-900 dark:text-neutral-100 group-hover:scale-105 transition-transform duration-300 shadow-sm">
+                    <Phone size={18} />
+                  </div>
+                  <div className="text-left font-mono text-xs font-semibold">
+                    <p className="text-neutral-500 dark:text-neutral-400 font-bold uppercase tracking-wider text-[10px] leading-none mb-1">Phone</p>
+                    <p className="text-foreground font-semibold">+91 89709 00825</p>
                   </div>
                 </a>
 
@@ -75,14 +88,14 @@ export default function Contact() {
                   href="https://www.linkedin.com/in/santhosha-narayana-naik-29317930b"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 text-text-muted hover:text-primary transition-all duration-300 group"
+                  className="flex items-center gap-4 text-text-muted hover:text-neutral-950 dark:hover:text-white transition-all duration-300 group"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-card-base border border-card-border flex items-center justify-center text-primary group-hover:scale-105 transition-transform duration-300">
+                  <div className="w-11 h-11 rounded-xl bg-card-base border border-card-border flex items-center justify-center text-neutral-900 dark:text-neutral-100 group-hover:scale-105 transition-transform duration-300 shadow-sm">
                     <Linkedin size={18} />
                   </div>
                   <div className="text-left font-mono text-xs font-semibold">
-                    <p className="text-gray-500 font-bold uppercase tracking-wider text-[10px] leading-none mb-1">LinkedIn</p>
-                    <p className="text-foreground">linkedin.com/in/santhosha-narayana-naik-29317930b</p>
+                    <p className="text-neutral-500 dark:text-neutral-400 font-bold uppercase tracking-wider text-[10px] leading-none mb-1">LinkedIn</p>
+                    <p className="text-foreground font-semibold">linkedin.com/in/santhosha-narayana-naik-29317930b</p>
                   </div>
                 </a>
 
@@ -90,24 +103,24 @@ export default function Contact() {
                   href="https://github.com/SanthoshaNaik"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 text-text-muted hover:text-primary transition-all duration-300 group"
+                  className="flex items-center gap-4 text-text-muted hover:text-neutral-950 dark:hover:text-white transition-all duration-300 group"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-card-base border border-card-border flex items-center justify-center text-primary group-hover:scale-105 transition-transform duration-300">
+                  <div className="w-11 h-11 rounded-xl bg-card-base border border-card-border flex items-center justify-center text-neutral-900 dark:text-neutral-100 group-hover:scale-105 transition-transform duration-300 shadow-sm">
                     <Github size={18} />
                   </div>
                   <div className="text-left font-mono text-xs font-semibold">
-                    <p className="text-gray-500 font-bold uppercase tracking-wider text-[10px] leading-none mb-1">GitHub</p>
-                    <p className="text-foreground">github.com/SanthoshaNaik</p>
+                    <p className="text-neutral-500 dark:text-neutral-400 font-bold uppercase tracking-wider text-[10px] leading-none mb-1">GitHub</p>
+                    <p className="text-foreground font-semibold">github.com/SanthoshaNaik</p>
                   </div>
                 </a>
 
                 <div className="flex items-center gap-4 text-text-muted group">
-                  <div className="w-11 h-11 rounded-xl bg-card-base border border-card-border flex items-center justify-center text-primary">
+                  <div className="w-11 h-11 rounded-xl bg-card-base border border-card-border flex items-center justify-center text-neutral-900 dark:text-neutral-100 shadow-sm">
                     <MapPin size={18} />
                   </div>
                   <div className="text-left font-mono text-xs font-semibold">
-                    <p className="text-gray-500 font-bold uppercase tracking-wider text-[10px] leading-none mb-1">Location</p>
-                    <p className="text-foreground">Bangalore, India</p>
+                    <p className="text-neutral-500 dark:text-neutral-400 font-bold uppercase tracking-wider text-[10px] leading-none mb-1">Location</p>
+                    <p className="text-foreground font-semibold">Bengaluru, India</p>
                   </div>
                 </div>
               </div>

@@ -73,9 +73,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-card-border bg-card-base text-xs font-semibold uppercase tracking-wider text-primary shadow-sm"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-card-border bg-card-base text-xs font-bold uppercase tracking-wider text-neutral-800 dark:text-neutral-300 shadow-sm"
           >
-            <Sparkles size={14} className="text-secondary animate-pulse" />
+            <Sparkles size={14} className="text-neutral-700 dark:text-neutral-300 animate-pulse" />
             <span>Software Developer Portfolio</span>
           </motion.div>
 
@@ -87,7 +87,7 @@ export default function Hero() {
               className="text-4xl sm:text-5xl md:text-6xl font-black font-display tracking-tight text-foreground leading-[1.1]"
             >
               Hi, I'm <br />
-              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent drop-shadow-sm">
+              <span className="bg-gradient-to-r from-neutral-950 via-neutral-800 to-neutral-700 dark:from-white dark:via-neutral-200 dark:to-neutral-400 bg-clip-text text-transparent drop-shadow-sm">
                 Santhosha Narayana Naik
               </span>
             </motion.h1>
@@ -99,7 +99,7 @@ export default function Hero() {
               className="text-xl sm:text-2xl md:text-3xl font-bold font-display text-text-muted h-10 flex items-center justify-center"
             >
               <span>I build things as a&nbsp;</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent font-semibold typewriter-cursor border-r-2 border-transparent">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-neutral-950 via-neutral-800 to-neutral-700 dark:from-white dark:via-neutral-200 dark:to-neutral-400 font-bold typewriter-cursor border-r-2 border-transparent">
                 {text}
               </span>
             </motion.h2>
@@ -109,7 +109,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-base sm:text-lg text-text-muted max-w-2xl font-normal leading-relaxed text-center"
+            className="text-base sm:text-lg text-text-muted max-w-2xl font-medium leading-relaxed text-center"
           >
             A motivated and curious software enthusiast with a solid foundation in development and a genuine passion for solving real-world problems.
           </motion.p>
@@ -124,7 +124,7 @@ export default function Hero() {
             <a
               href="#projects"
               onClick={(e) => handleScrollTo(e, 'projects')}
-              className="flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-primary to-secondary hover:from-primary/95 hover:to-secondary/95 text-white font-semibold rounded-xl shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 transform hover:-translate-y-0.5 group cursor-pointer"
+              className="flex items-center gap-2 px-6 py-3.5 bg-neutral-950 hover:bg-neutral-800 dark:bg-white dark:hover:bg-neutral-100 text-white dark:text-black font-bold rounded-xl shadow-lg border border-neutral-800 dark:border-white/20 transition-all duration-300 transform hover:-translate-y-0.5 group cursor-pointer"
             >
               <span>View Projects</span>
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
@@ -133,19 +133,19 @@ export default function Hero() {
             <a
               href="#contact"
               onClick={(e) => handleScrollTo(e, 'contact')}
-              className="flex items-center gap-2 px-6 py-3.5 border border-card-border bg-card-base hover:bg-black/5 dark:hover:bg-white/5 text-foreground font-semibold rounded-xl shadow-sm transition-all duration-300 transform hover:-translate-y-0.5 group cursor-pointer"
+              className="flex items-center gap-2 px-6 py-3.5 border border-card-border bg-card-base hover:bg-neutral-100 dark:hover:bg-neutral-900 text-foreground font-semibold rounded-xl shadow-sm transition-all duration-300 transform hover:-translate-y-0.5 group cursor-pointer"
             >
               <span>Contact Me</span>
-              <Mail size={18} className="text-text-muted group-hover:text-primary transition-colors" />
+              <Mail size={18} className="text-text-muted group-hover:text-foreground transition-colors" />
             </a>
 
             <a
-              href='..\santhosh naik Jun 26 Resume.pdf'
+              href="/resume.pdf"
               download
-              className="flex items-center gap-2 px-6 py-3.5 border border-card-border bg-card-base hover:bg-black/5 dark:hover:bg-white/5 text-foreground font-semibold rounded-xl shadow-sm transition-all duration-300 transform hover:-translate-y-0.5 group cursor-pointer"
+              className="flex items-center gap-2 px-6 py-3.5 border border-card-border bg-card-base hover:bg-neutral-100 dark:hover:bg-neutral-900 text-foreground font-semibold rounded-xl shadow-sm transition-all duration-300 transform hover:-translate-y-0.5 group cursor-pointer"
             >
               <span>Resume</span>
-              <Download size={18} className="text-text-muted group-hover:text-accent transition-colors" />
+              <Download size={18} className="text-text-muted group-hover:text-foreground transition-colors" />
             </a>
           </motion.div>
         </div>
